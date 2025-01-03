@@ -16,7 +16,7 @@ Note: I could have certainly used a single strip wired at one side, but it would
 
 ## main.cpp
 
-Here the various components are "wired" together and initial settings (like audio input to be used) are specified.
+In this file the various components are "wired" together and initial settings (like audio input to be used) are specified.
 
 ## MyStage.h
 
