@@ -2,8 +2,12 @@
 
 MyStage::MyStage(AudioSensor *audioSensor, State *state) {
 
+    // physical strips
+
     Strip *left = addStrip<STRIP_LEFT_COUNT, STRIP_LEFT_PIN, STRIP_LEFT_DENSITY>();
     Strip *right = addStrip<STRIP_RIGHT_COUNT, STRIP_RIGHT_PIN, STRIP_RIGHT_DENSITY>();
+
+    // virtual strips
 
     Strip *front = new JoinedStrip(new ReversedStrip(left), right, 2);
     Strip *subLeft = new SubStrip(left, 15, 79);
@@ -19,7 +23,7 @@ MyStage::MyStage(AudioSensor *audioSensor, State *state) {
     // Fx #1
 
     addFx(
-        new Rainbow(front, state)
+        new Sunset(front, state)
     );
 
     // Fx #2
